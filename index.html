@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Stark Holo Keyboard V2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanlines"></div>
+<header>
+  <div>
+    <div class="eyebrow">STARK INTERFACE // V2</div>
+    <h1>HOLO KEYBOARD</h1>
+  </div>
+  <div id="status" class="status offline">● CAMERA OFF</div>
+</header>
+
+<main>
+  <section class="left">
+    <div class="camera-wrap">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay"></canvas>
+      <div class="camera-label">HAND TRACKING</div>
+      <div class="gesture" id="gesture">Camera off</div>
+    </div>
+    <div class="controls">
+      <button id="start">START CAMERA</button>
+      <button id="stop" disabled>STOP</button>
+      <button id="clear">CLEAR TEXT</button>
+    </div>
+    <p class="hint">Point with ☝️. Pinch thumb + index to press a key. Keep your hand above the keyboard area.</p>
+  </section>
+
+  <section class="right">
+    <textarea id="output" spellcheck="false" placeholder="SYSTEM OUTPUT..."></textarea>
+    <div class="keyboard" id="keyboard"></div>
+  </section>
+</main>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
